@@ -1,0 +1,11 @@
+
+Example
+<select  ng-model="modelrow.statusName" ng-change="changeStatus(row)"
+                                 validation-dropdown  >
+                            <option value="" ng-show="!(row.statusName)">Status</option>
+                            <option ng-repeat="status in allStatuses" value="{{status.userStatusName}}">{{status.userStatusName}}</option>
+                        </select>
+
+
+<input type="text" name="firstName" ng-model="model.userFirstName" class="full-width" placeholder="First Name"
+                        validation-error-text validation-name maxlength="50" ng-focus="validation.onFocusedValidation(userManagementForm.firstName)" ng-blur="validation.onBluredValidation(userManagementForm.firstName)" ng-style="{'border':userManagementForm.showvalidation? validation.borderCol(userManagementForm.firstName) : ''}">                        
